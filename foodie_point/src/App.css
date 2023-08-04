@@ -1,0 +1,113 @@
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+/* //home */
+/* .App{
+  background-color: rgb(226, 223, 223);
+} */
+
+/* Adjust height for larger screens */
+@media (min-width: 1024px) {
+  .carousel-item {
+    height: 400px;
+  }
+  .custom-card {
+    transition: box-shadow 0.3s;
+    height: 400px;
+    padding: 10px 20px;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* navbar */
+#navA{
+  font-size: larger;
+  font-weight: 600;
+  color: rgb(244, 239, 239);
+}
+#navbar{
+  background-color: rgb(109, 166, 23);
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  transition: background-color 0.3s;
+}
+#logo{
+  width: 50px;
+  margin-right: 100px;
+}
+
+
+
+
+
+/* restaurant */
+.custom-card {
+  transition: box-shadow 0.3s;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.custom-card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* AboutPage.css */
+.carousel-container {
+  margin-top: 20px;
+}
+
+.carousel-item img {
+  height: 400px;
+  object-fit: cover;
+}
+
+.about-page {
+  /* Your background or container styling */
+}
+
+.about-heading {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
