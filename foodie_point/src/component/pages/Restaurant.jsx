@@ -18,9 +18,10 @@ export const Restaurant = () => {
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
+          console.log(position)
           const latitude = position.coords.latitude;
           const longitude = position.coords.longitude;
-          // console.log(latitude, longitude);
+          console.log(latitude, longitude);
           dispatch(setLatitude(latitude))
           dispatch(setLongitude(longitude))
         },
@@ -70,7 +71,7 @@ export const Restaurant = () => {
   return (
     <>
     <div className=' main-scroll-restaurants mt-3'>
-      {city !== "" ? (<div>
+      {city != "" ? (<div>
         <MdLocationPin style={{ color: "green", fontSize: "larger" }} />
         <h2> {city} </h2>
       </div>) : (
