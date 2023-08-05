@@ -71,7 +71,7 @@ export const Restaurant = () => {
   return (
     <>
     <div className=' main-scroll-restaurants mt-3'>
-      {city != "" ? (<div>
+      {city != "" ? (<div style={{textAlign:"end",paddingRight:"30px"}}>
         <MdLocationPin style={{ color: "green", fontSize: "larger" }} />
         <h2> {city} </h2>
       </div>) : (

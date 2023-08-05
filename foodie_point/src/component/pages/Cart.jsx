@@ -7,6 +7,7 @@ import { addToCart, cartTotal, clearCart, decreItem, increItem, removeCartItem }
 import AlternateMenuImg from "../images/food-alternate-img.jpg";
 import CartImg from "../images/cart-img.webp";
 import { BiRupee } from 'react-icons/bi';
+import { Footer } from './Footer';
 
 const restroImgUrl = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
 const menuImgUrl = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/";
@@ -45,7 +46,7 @@ const handleDelete=(item)=>{
                 <div className="w-25">
                   <img
                     src={item.imageId ? menuImgUrl + item.imageId : AlternateMenuImg}
-                    className=" img-fluid rounded"
+                    className=" img-fluid rounded w-50"
                     alt="menu" 
                     id="cartOrderImg"/>
                 </div>
@@ -150,5 +151,6 @@ const handleDelete=(item)=>{
       )}
 
     </div>
+    
   )
 }
