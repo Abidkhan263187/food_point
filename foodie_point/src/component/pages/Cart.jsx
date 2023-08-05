@@ -5,7 +5,7 @@ import { useNavigate, NavLink } from "react-router-dom";
 import { BsFillCartFill, BsFillRupeeFill, BsHeartFill, BsXCircleFill } from 'react-icons/bs';
 import { addToCart, cartTotal, clearCart, decreItem, increItem, removeCartItem } from '../redux/action'
 import AlternateMenuImg from "../images/food-alternate-img.jpg";
-import CartImg from "../images/cart-img.webp";
+
 import { BiRupee } from 'react-icons/bi';
 import { Footer } from './Footer';
 
@@ -37,7 +37,7 @@ const handleDelete=(item)=>{
     dispatch(cartTotal());
   }, [cartItems, flag])
   return (
-    <div className="container mt-4">
+    <div className="container mt-4 ">
       {cartItems.length > 0 ? (
         <div className="row">
           <div className="  col-lg-8 ">
@@ -50,7 +50,7 @@ const handleDelete=(item)=>{
                     alt="menu" 
                     id="cartOrderImg"/>
                 </div>
-                <div id="name_price_cart" className="w-50  d-flex justify-content-evenly">
+                <div id="name_price_cart" className="w-50  d-flex justify-content-between px-4 ">
                   <strong> <p className="mb-2 text-base text-danger">{item.name}</p></strong>
                   <div className="d-flex font-weight-bold">
                     <BiRupee className="menu-price-icon mt-1" style={{ color: "green" }} />
@@ -62,7 +62,7 @@ const handleDelete=(item)=>{
                     <button
                    
                       disabled={item.itemCount === 1}
-                      className="btn btn-outline-success  rounded "
+                      className="btn btn-outline-success  rounded size-sm"
                       onClick={() => handleDecre(item)}
                     >
                       -

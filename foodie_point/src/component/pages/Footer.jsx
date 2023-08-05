@@ -1,37 +1,44 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import { FaFacebook, FaTwitter, FaInstagram, FaPhone } from 'react-icons/fa';
-import { IoCard, IoLogoPaypal } from 'react-icons/io5';
+import { FaPhone, FaEnvelope, FaFacebook, FaTwitter, FaInstagram, FaCcVisa, FaCcMastercard, FaCcPaypal } from 'react-icons/fa';
 
 export const Footer = () => {
   return (
-    <footer className="bg-dark text-light py-4">
-      <Container>
-        <Row className="align-items-center">
-          <Col md={4} className="mb-3 mb-md-0">
-            <div className="d-flex align-items-center">
-              <FaPhone className="mr-4 mx-3"  />
-             
-              <p className="mb-0">Phone: +91 62-8000-7521</p>
+    <footer className="bg-dark text-white text-center py-4">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-4 mb-3">
+            <h4>Contact Us</h4>
+            <p>
+              <FaPhone className="mr-2 mb-1" /> Phone: +91-628-000-7521
+            </p>
+            <p>
+              <FaEnvelope className="mr-2 mb-1" /> Email: abidkhan263187@gmail.com
+            </p>
+          </div>
+          <div className="col-md-4 mb-3">
+            <h4>Follow Us</h4>
+            <div>
+              <a href="#" className="text-white mr-3">
+                <FaFacebook />
+              </a>&nbsp;&nbsp;
+              <a href="#" className="text-white mr-3">
+                <FaTwitter />
+              </a>&nbsp;&nbsp;
+              <a href="#" className="text-white">
+                <FaInstagram />
+              </a>
             </div>
-          </Col>
-          <Col md={4} className="mb-3 mb-md-0">
-            <div className="d-flex justify-content-center">
-              <a href="#" className="text-light mx-3"><FaFacebook size={24} /></a>
-              <a href="#" className="text-light mx-3"><FaTwitter size={24} /></a>
-              <a href="#" className="text-light mx-3"><FaInstagram size={24} /></a>
+          </div>
+          <div className="col-md-4">
+            <h4>Accepted Payment Methods</h4>
+            <div>
+              <FaCcVisa className="mr-3" />&nbsp;&nbsp;&nbsp;
+              <FaCcMastercard className="mr-3" />&nbsp;&nbsp;&nbsp;
+              <FaCcPaypal />
             </div>
-          </Col>
-          <Col md={4}>
-            <div className="d-flex justify-content-center align-items-center">
-              <IoCard size={24} className="text-light mx-2" />
-              <IoLogoPaypal size={24} className="text-light mx-2" />
-              <p className="mb-0 ml-2">Accepted Payment Methods</p>
-            </div>
-            <p className="text-center mb-0 mt-2">© {new Date().getFullYear()} develop bu Abid khan</p>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 };

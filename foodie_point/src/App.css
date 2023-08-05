@@ -32,14 +32,22 @@
   font-weight: 600;
   color: rgb(244, 239, 239);
 }
-
 #navbar {
-  background-color: rgb(109, 166, 23);
   position: sticky;
   top: 0;
   z-index: 9999;
   transition: background-color 0.3s;
+  overflow: hidden; /* Ensure content doesn't overflow blurred border */
+  background: linear-gradient(to bottom, rgba(93, 155, 0, 0.8), rgb(220, 247, 176));
 }
+
+
+
+/* Rest of your original styles here */
+
+
+/* Rest of your original styles here */
+
 
 #logo {
   width: 50px;

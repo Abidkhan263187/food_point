@@ -22,7 +22,7 @@ export const MyNav = () => {
   const handleClick = () => {
     dispatch(cityName(search))
     dispatch(updateCords(search))
-    navigate('/restaurant')
+    // navigate('/restaurant')
     setSearch('')
   }
   return (
