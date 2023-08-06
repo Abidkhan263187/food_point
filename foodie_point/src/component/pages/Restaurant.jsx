@@ -7,6 +7,7 @@ import { RestroCard } from './RestroCard';
 import { setLatitude, setLongitude } from '../redux/action';
 import { MdLocationPin } from "react-icons/md";
 import { Footer } from './Footer';
+import { cityName } from '../redux/action';
 export const Restaurant = () => {
   const [hotels, sethotels] = useState([])
   const dispatch = useDispatch()
@@ -32,9 +33,28 @@ export const Restaurant = () => {
     }
   };
 
+  const getCityName = async (latitude, longitude) => {
+    try {
+      const response = await axios.get(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=0634b91148f043568ed5e7d800da13b1`);
+      const {results} = response.data;
+     console.log(results)
+        let GetcityName=results[0].components.state_district
+        let city= GetcityName.split(' ')[0];
+        dispatch(cityName(city))
+     
+    
+    } catch (error) {
+      console.log("Error while fetching city name:", error);
+    }
+  };
+  
   useEffect(() => {
-    getLocation()
-  }, [])
+    getLocation();
+  }, []);
+  
+  useEffect(() => {
+    getCityName(lati, long);
+  }, [lati, long]);
 
   useEffect(() => {
     (async () => {
@@ -45,6 +65,7 @@ export const Restaurant = () => {
         const response = await axios.get(restaurants_api);
 
         const data = response.data.data?.cards;
+       
         if (data) {
           const elements = data.filter(
             (card) => card.card?.card?.gridElements?.infoWithStyle.restaurants
