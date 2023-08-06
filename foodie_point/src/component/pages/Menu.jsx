@@ -93,7 +93,7 @@ export const Menu = () => {
 
             {/* finish */}
           </div>
-          <hr style={{ marginTop: "30px" }} />
+          
           <div class="main-scroll border-top mt-5">
             <div class="card">
               <div class="card-body">

@@ -37,7 +37,7 @@ export const MenueCard = ({
             return (
               <><div
                     key={id}
-                    className="menu-card d-flex justify-content-between p-3 mb-6"
+                    className="menu-card d-flex justify-content-between p-3 mb-6 "
 
                 >
 

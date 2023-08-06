@@ -149,6 +149,11 @@
   max-width: 155px;
   margin-right: 15px;
 }
+.scroller-container {
+  overflow-x: hidden; /* Hide horizontal overflow */
+  overflow-y: auto; /* Enable vertical scroll if content overflows */
+  max-height: 300px; /* Set a maximum height for the scrolling container */
+}
 
 /* For small devices, adjust the image size */
 @media (max-width: 576px) {
