@@ -64,6 +64,7 @@ export const MenueCard = ({
                                             restaurantInfo.locality === currentRestaurantInfo.locality)) {
                                         dispatch(addToCart(card.info));
                                         dispatch(addRestaurantInfo(currentRestaurantInfo));
+                                       
                                     } else {
                                         setIsOtherRestaurant(true);
                                     }

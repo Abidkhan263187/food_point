@@ -31,9 +31,11 @@ export const reducer = (store = initVal, action) => {
                 alert("Item already exists in the cart");
                 return { ...store };
             } else {
+                alert("Item added")
                 const updatedCartItem = { ...action.payload, itemCount: 1 };
                 const updatedCartItems = [...store.cartItems, updatedCartItem];
                 localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
+               
                 return { ...store, cartItems: updatedCartItems };
             }
         }
