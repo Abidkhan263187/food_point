@@ -14,7 +14,7 @@ export const setLatitude=(payload)=>{
 }
 
 export const  cordinates=(payload)=>{
-    console.log(payload)
+    // console.log(payload)
 return {
     type:UPDATE_CORDS,
     payload
