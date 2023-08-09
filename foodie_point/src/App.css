@@ -103,6 +103,7 @@
 
   }
 
+  
   #name_price_cart {
     display: flex;
     justify-content: center;
@@ -155,12 +156,41 @@
   max-height: 300px; /* Set a maximum height for the scrolling container */
 }
 
+
+/* contact  */
+.icon {
+  font-size: 2rem;
+  margin-right: 20px;
+}
+
+.big-green {
+  color: green;
+  font-size: 3rem;
+  margin: auto;
+}
+
+
+
+
+
+
 /* For small devices, adjust the image size */
 @media (max-width: 576px) {
   .menu-image {
     max-width: 80px;
   }
 }
+.icon {
+  font-size: 1rem;
+
+}
+
+.big-green {
+  color: green;
+  font-size: 2rem;
+  margin: auto;
+}
+
 
 /* modal   */
 #modalBlurPortion {

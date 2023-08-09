@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate, NavLink } from "react-router-dom";
-import { BsFillCartFill, BsFillRupeeFill, BsHeartFill, BsXCircleFill } from 'react-icons/bs';
-import { addToCart, cartTotal, clearCart, decreItem, increItem, removeCartItem } from '../redux/action'
+import { BsXCircleFill } from 'react-icons/bs';
+import { cartTotal, clearCart, decreItem, increItem, removeCartItem } from '../redux/action'
 import AlternateMenuImg from "../images/food-alternate-img.jpg";
 
 import { BiRupee } from 'react-icons/bi';
@@ -36,6 +36,13 @@ const handleDelete=(item)=>{
   useEffect(() => {
     dispatch(cartTotal());
   }, [cartItems, flag])
+
+  const handleCheckOut=()=>{
+    setTimeout(()=>{
+      navigate('/success')
+    },1000)
+  
+  }
   return (
     <div className="container mt-4 ">
       {cartItems.length > 0 ? (
@@ -116,7 +123,7 @@ const handleDelete=(item)=>{
               </div>
               <button
                 className="btn btn-success mt-3"
-                onClick={() => alert('Order Successful')}
+                onClick={handleCheckOut}
               >
                 Checkout
               </button>
