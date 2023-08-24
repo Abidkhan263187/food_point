@@ -56,7 +56,7 @@ export const Home = () => {
           <div className="row justify-content-center">
             <div className="col-lg-3">
               <Card>
-                <Card.Img variant="top" src="https://sukhis.com/app/uploads/2022/05/image2-3-1024x684.jpg"  />
+                <Card.Img variant="top" src="https://sukhis.com/app/uploads/2022/05/image2-3-1024x684.jpg" />
                 <Card.Body>
                   <Card.Title>North Indian</Card.Title>
                   <Card.Text>Enjoy our signature dish</Card.Text>
