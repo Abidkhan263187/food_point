@@ -77,7 +77,8 @@ export const Restaurant = () => {
 
           // console.log(elements[0]);
         
-            const restroData = elements[0].card.card.gridElements.infoWithStyle.restaurants;
+          const restroData =
+          elements[0].card.card.gridElements.infoWithStyle.restaurants;
             sethotels(restroData)
         }
         // else{

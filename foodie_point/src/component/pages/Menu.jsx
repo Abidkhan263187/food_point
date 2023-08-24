@@ -30,18 +30,18 @@ export const Menu = () => {
       <div className="container">
 
 
-            <div className="sticky-top pt-4">
-              {cartItems.length > 0 && (
-                <NavLink to="/cart" className='nav-link'>
-                  <div className="bg-light rounded p-3">
-                    <p className="m-0 text-center">
-                      <strong >{cartItems.length} Items</strong> | <span  style={{color:"#008000" ,fontWeight:"700"}}>  View Cart</span>
-                    </p>
-                  </div>
-                </NavLink>
-              )}
-            </div>
-     
+        <div className="sticky-top pt-4">
+          {cartItems.length > 0 && (
+            <NavLink to="/cart" className='nav-link'>
+              <div className="bg-light rounded p-3">
+                <p className="m-0 text-center">
+                  <strong >{cartItems.length} Items</strong> | <span style={{ color: "#008000", fontWeight: "700" }}>  View Cart</span>
+                </p>
+              </div>
+            </NavLink>
+          )}
+        </div>
+
         <div className="row justify-content-center">
           <div className="row-md-6  mt-4 p-2" style={{ border: "1px solid rgb(226, 223, 223) ", borderRadius: "10px" }}>
             <div className="card border-0">
@@ -75,7 +75,8 @@ export const Menu = () => {
 
             <div id="searchMenue" className="row d-flex justify-content-between  align-items-center" >
               <div className='  col-md-5 col-lg-3 d-flex justify-content-between  align-items-center' id="menueSearch" >
-                <input id="inputMenueCArd" type="text" placeholder="add more items.. ..." onChange={(e) => setMenuSearchInput(e.target.value)} />&nbsp;&nbsp;
+                <input id="inputMenueCArd" type="text" placeholder="add more items.. ..."
+                  onChange={(e) => setMenuSearchInput(e.target.value)} />&nbsp;&nbsp;
                 <Button variant="success" >Search</Button>
               </div>
               <div className=" col-sm-2 col-md-4 col-lg-2 " id="price_time">
@@ -93,7 +94,7 @@ export const Menu = () => {
 
             {/* finish */}
           </div>
-          
+
           <div class="main-scroll border-top mt-5">
             <div class="card">
               <div class="card-body">
