@@ -36,7 +36,7 @@ export const Restaurant = () => {
   const getCityName = async (latitude, longitude) => {
     if(latitude && longitude){
     try {
-      const response = await axios.get(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=0634b91148f043568ed5e7d800da13b1`);
+      const response = await axios.get(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${process.env.REACT_APP_API_RESTAURANT}`);
       const { results } = response.data;
       //  console.log(results)
       let GetcityName = results[0].components.state_district
@@ -65,7 +65,7 @@ export const Restaurant = () => {
 
       try {
         // console.log("updated", lati, long)
-        let restaurants_api = `https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=${lati}&lng=${long}&page_type=DESKTOP_WEB_LISTING`;
+        let restaurants_api = `https://corsproxy.io/?${process.env.REACT_APP_SWIGGY}?lat=${lati}&lng=${long}&page_type=DESKTOP_WEB_LISTING`;
         const response = await axios.get(restaurants_api);
 
         const data = response.data.data?.cards;

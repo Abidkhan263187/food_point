@@ -15,7 +15,7 @@ export const HotelMenue = (id) => {
   useEffect(() => {
     const fetchRestaurantMenu = async () => {
       try {
-        let restaurantmenu_api = `https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=${lati}&lng=${long}&restaurantId=${id}&submitAction=ENTER`;
+        let restaurantmenu_api = `https://corsproxy.io/?${process.env.REACT_APP_MENUE}?page-type=REGULAR_MENU&complete-menu=true&lat=${lati}&lng=${long}&restaurantId=${id}&submitAction=ENTER`;
 
         const response = await axios.get(restaurantmenu_api);
         const menuData = response.data.data?.cards?.find(
