@@ -59,13 +59,13 @@ export const MyNav = () => {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
-            <Button variant="outline-success" id="navA" style={{ backgroundColor: '#198754' }} onClick={handleClick}>Search</Button>
+            <Button variant="outline-success"  style={{ backgroundColor: '#198754',color:'white' }} onClick={handleClick}>Search</Button>
 
 
           </Form>
           <NavLink as={Link} to="/cart" className="d-flex align-items-center text-decoration-none position-relative">
             <BsFillCartFill className="text-success" style={{ fontSize: '2.5rem', marginLeft: '10px' }} />
-            <div className="position-absolute top-50 start-50 mx-2 translate-middle text-white" style={{ fontSize: "small", fontWeight: "700" }}>
+            <div className="position-absolute top-50 start-50 mx-2 translate-middle text-white" style={{ fontSize: "small",  fontWeight: "700" }}>
               {cartItems.length}
             </div>
           </NavLink>

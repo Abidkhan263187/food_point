@@ -6,27 +6,97 @@
   height: 40vmin;
   pointer-events: none;
 }
-#navA{
+
+#navA {
   border-radius: 10px;
+
 }
 
-#navA:hover{
-  background-color: green;
+#sectionOne {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-image: url(http://madang.kenzap.com/wp-content/uploads/2016/11/home-banner1.jpg);
+}
+#sectionOne h1{
+  letter-spacing: 5px;
+  font-weight: 400;
+  font-size:50px ;
+}
+#sectionOne h1>span{
+  color: rgb(66, 163, 66);
+  letter-spacing: 5px; /* Adjust the spacing as needed */
+  font-weight: 450;
+  font-size:50px ;
+
+}
+#section_one_main {
+  display: grid;
+  height: 50vh;
+  width: 30%;
+  margin-right: 35%;
+  text-align: start;
+}
+
+#section_one_main>p{
+  width: 45%;
+  margin-top: 20px;
+  color: rgb(83, 82, 82);
+}
+
+#sectionOne>div {
+  width: 50%;
+}
+
+#carousal{
+  width: 95%;
+  margin:0% auto 5% auto;
+}
+
+#navA:hover {
+  text-decoration: underline;
   border-radius: 10px;
+}
+#sectionOne button{
+  width: 30%;
+}
+
+
+#sec_two_service{
+  display: grid;
+  grid-template-columns:repeat(3,1fr) ;
+  gap: 40px;
+  padding: 0% 8%;
+}
+
+#sec_two_container{
+ 
+  margin:5% 0px;
+  height: 60vh;
+  color: rgb(104, 103, 103);
+}
+
+#sec_two_service>div{
+  display: grid;
+  border: 1px solid rgb(77, 197, 83);
+  border-radius: 10px;
+  padding: 10px;
+}
+#sec_two_service>div>img{
+  margin: auto;
+}
+#sec_two_service>div>p{
+  padding: 0px 20px;
+}
+#navA {
+  font-size: larger;
+  font-weight: 600;
+  color: rgb(20, 20, 20);
+  transform: transition 0.8s ease-in-out;
 }
 
 /* Adjust height for larger screens */
-@media (min-width: 1024px) {
-  .carousel-item {
-    height: 400px;
-  }
 
-  .custom-card {
-    transition: box-shadow 0.3s;
-    height: 400px;
-    padding: 10px 20px;
-  }
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -35,18 +105,16 @@
 }
 
 /* navbar */
-#navA {
-  font-size: larger;
-  font-weight: 600;
-  color: rgb(244, 239, 239);
-}
+
 #navbar {
   position: sticky;
   top: 0;
+
   z-index: 9999;
   transition: background-color 0.3s;
-  overflow: hidden; /* Ensure content doesn't overflow blurred border */
-  background: linear-gradient(to bottom, rgba(74, 124, 0, 0.8), rgb(148, 202, 61));
+  overflow: hidden;
+  /* Ensure content doesn't overflow blurred border */
+  background: white;
 }
 
 
@@ -98,9 +166,81 @@
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
+
 .about-text {
   font-size: 1.1rem;
   margin-bottom: 15px;
+}
+
+
+
+#inputMenueCArd {
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(237, 234, 234);
+  padding: 5px 10px;
+
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* MenueCard.css */
+.menu-image {
+  max-width: 155px;
+  margin-right: 15px;
+}
+
+.scroller-container {
+  overflow-x: hidden;
+  /* Hide horizontal overflow */
+  overflow-y: auto;
+  /* Enable vertical scroll if content overflows */
+  max-height: 300px;
+  /* Set a maximum height for the scrolling container */
+}
+
+
+/* contact  */
+.icon {
+  font-size: 2rem;
+  margin-right: 20px;
+}
+
+.big-green {
+  color: green;
+  font-size: 3rem;
+  margin: auto;
+}
+
+
+
+
+
+
+/* For small devices, adjust the image size */
+@media (max-width: 576px) {
+  .menu-image {
+    max-width: 80px;
+  }
+}
+
+.icon {
+  font-size: 1rem;
+
+}
+
+.big-green {
+  color: green;
+  font-size: 2rem;
+  margin: auto;
+}
+
+
+/* modal   */
+#modalBlurPortion {
+  margin: auto;
 }
 
 /* menue card */
@@ -110,7 +250,34 @@
     gap: 20px;
 
   }
-
+  #how{
+    margin: 20px;
+  }
+  #sectionOne h1{
+    font-size: 30px;
+  }
+  #sectionOne h1>span{
+    font-size: 30px;
+  }
+  #sectionOne {
+    height: 70vh;
+  }
+  #sectionOne p{
+    display: none;
+  }
+  #sectionOne button{
+    width: 100%;
+   padding: 5px;
+  }
+  #sec_two_container{
+ 
+    margin:5% 0px 100% 0px;
+    height: 100vh;
+    color: rgb(104, 103, 103);
+  }
+  #sec_two_service{
+    grid-template-columns:repeat(1,1fr) ;
+  }
   
   #name_price_cart {
     display: flex;
@@ -140,71 +307,27 @@
     margin: auto;
   }
 }
-
-#inputMenueCArd {
-  border: none;
-  border-radius: 5px;
-  background-color: rgb(237, 234, 234);
-  padding: 5px 10px;
-
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-/* MenueCard.css */
-.menu-image {
-  max-width: 155px;
-  margin-right: 15px;
-}
-.scroller-container {
-  overflow-x: hidden; /* Hide horizontal overflow */
-  overflow-y: auto; /* Enable vertical scroll if content overflows */
-  max-height: 300px; /* Set a maximum height for the scrolling container */
-}
-
-
-/* contact  */
-.icon {
-  font-size: 2rem;
-  margin-right: 20px;
-}
-
-.big-green {
-  color: green;
-  font-size: 3rem;
-  margin: auto;
-}
-
-
-
-
-
-
-/* For small devices, adjust the image size */
-@media (max-width: 576px) {
-  .menu-image {
-    max-width: 80px;
+@media (min-width:768px) and ( max-width: 1024px) {
+  .carousel-item {
+    height: 400px;
   }
-}
-.icon {
-  font-size: 1rem;
+  #sec_two_service{
+    grid-template-columns:repeat(3,1fr) ;
+  }
+  
+  #sec_two_container h4{
+    font-size: larger;
+  }
+  #sec_two_container  p{
+    font-size: small;
+  }
+  .custom-card {
+    transition: box-shadow 0.3s;
+    height: 400px;
+    padding: 10px 20px;
+  }
 
 }
-
-.big-green {
-  color: green;
-  font-size: 2rem;
-  margin: auto;
-}
-
-
-/* modal   */
-#modalBlurPortion {
-  margin: auto;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
