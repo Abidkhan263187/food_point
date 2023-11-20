@@ -19,14 +19,14 @@ export const MenueCard = ({
   const dispatch = useDispatch();
   const { restaurantInfo } = useSelector((store) => store);
   const [isOtherRestarurant, setIsOtherRestaurant] = useState(false);
-
+ console.log(menu)
   return (
     <>
       {isOtherRestarurant && (
         <ModalPopup setIsOtherRestaurant={setIsOtherRestaurant} />
       )}
 
-      {menu && menu.length > 0 ? (
+      { menu.length > 0 ? (
         menu
           .filter(({ card }) =>
             card?.info?.name.toLowerCase().includes(menuSearchInput.toLowerCase())
@@ -83,9 +83,11 @@ export const MenueCard = ({
                 </div><hr /></>
             );
           })
-      ) : (
-        <Spinner animation="border" variant="danger" />
-      )}
+      ): menu.length !==0 ? (
+        <Spinner animation="border" variant="danger" /> 
+      ): <h3>No menu card</h3> }
     </>
   );
 };
+
+
