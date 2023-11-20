@@ -11,6 +11,11 @@
   border-radius: 10px;
 
 }
+.mobile-relative {
+  font-size: small;
+  font-weight: 700;
+  margin-left: 33px;
+}
 
 #sectionOne {
   display: grid;
@@ -250,6 +255,15 @@
     gap: 20px;
 
   }
+  .mobile-cart{
+  margin-left: 100px;
+  }
+  
+    /* .mobile-relative {
+      position: relative;
+      margin-left: 33px;
+    } */
+ 
   #how{
     margin: 20px;
   }

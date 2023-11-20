@@ -63,9 +63,9 @@ export const MyNav = () => {
 
 
           </Form>
-          <NavLink as={Link} to="/cart" className="d-flex align-items-center text-decoration-none position-relative">
-            <BsFillCartFill className="text-success" style={{ fontSize: '2.5rem', marginLeft: '10px' }} />
-            <div className="position-absolute top-50 start-50 mx-2 translate-middle text-white" style={{ fontSize: "small",  fontWeight: "700" }}>
+          <NavLink as={Link} to="/cart"  className="d-flex align-items-center  text-decoration-none position-relative">
+            <BsFillCartFill className="text-success mobile-cart" style={{ fontSize: '2.5rem', marginLeft: '10px' }} />
+            <div className="position-absolute top-50 translate-middle text-white mobile-relative" style={{ fontSize: "small",  fontWeight: "700" }}>
               {cartItems.length}
             </div>
           </NavLink>
